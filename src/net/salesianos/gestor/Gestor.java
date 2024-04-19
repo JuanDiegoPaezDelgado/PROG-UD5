@@ -102,4 +102,17 @@ public class Gestor {
         }
         JOptionPane.showMessageDialog(null, restauranteInfo, "Lista de Restaurantes", JOptionPane.PLAIN_MESSAGE);
     }
+
+    public static void borrarRestaurante() {
+        String nombreABorrar = JOptionPane.showInputDialog("Ingrese el nombre del restaurante a eliminar:");
+        for (Restaurante restaurante : listaRestaurantes) {
+            if (restaurante.getNombre().equalsIgnoreCase(nombreABorrar)) {
+                listaRestaurantes.remove(restaurante);
+                JOptionPane.showMessageDialog(null, "El restaurante fue eliminado correctamente", "Eliminacion exitosa",
+                        JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "Restaurante no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
+    }
 }
