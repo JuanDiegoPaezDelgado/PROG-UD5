@@ -11,7 +11,7 @@ public class Menu {
         int choice;
 
         do {
-            choice = JOptionPane.showOptionDialog(null, "Seleccione una opción:", "Menú", JOptionPane.DEFAULT_OPTION,
+            choice = JOptionPane.showOptionDialog(null, "Seleccione una opción:", "Menu", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
             switch (choice) {
                 case 0:
