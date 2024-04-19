@@ -11,9 +11,15 @@ public class Menu {
         int choice;
 
         do {
-            
-            choice = JOptionPane.showOptionDialog(null, "Seleccione una opción:", "Menu", JOptionPane.DEFAULT_OPTION,
+            String choiceString = (String) JOptionPane.showInputDialog(null, "Seleccione una opción:", "Menú",
                     JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+            choice = -1;
+            for (int i = 0; i < options.length; i++) {
+                if (options[i].equals(choiceString)) {
+                    choice = i;
+                    break;
+                }
+            }
             switch (choice) {
                 case 0:
                     try {

@@ -61,6 +61,11 @@ public class Gestor {
                 String nombreAEditar = JOptionPane.showInputDialog(null, "Ingrese el nombre del restaurante a editar",
                                 "Editar",
                                 JOptionPane.QUESTION_MESSAGE);
+                                if (!Utilidad.validacionEntradaDatoString(nombreAEditar)) {
+                                        JOptionPane.showMessageDialog(null,
+                                                        "Operación cancelada. No se ingresó ningún dato.",
+                                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                                        return;}
                 for (Restaurante restaurante : listaRestaurantes) {
                         if (restaurante.getNombre().equalsIgnoreCase(nombreAEditar)) {
                                 String[] opciones = { "Nombre", "Localizacion", "Horario", "Puntuacion", "Todo" };
