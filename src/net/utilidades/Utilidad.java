@@ -5,7 +5,9 @@ public class Utilidad {
         if (string == null || string.isEmpty()) {
             return false;
         } else {
-            return true; 
+            return true;
         }
     }
+
+
 }

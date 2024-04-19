@@ -1,8 +1,8 @@
 package net.salesianos.menu;
+
 import javax.swing.JOptionPane;
 
 import net.salesianos.gestor.Gestor;
-
 
 public class Menu {
     public static void mostrarMenu() {
@@ -15,10 +15,24 @@ public class Menu {
                     JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
             switch (choice) {
                 case 0:
-                    Gestor.agregarRestaurante();
+                    try {
+                        Gestor.agregarRestaurante();
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(null, "Ingrese un número válido para la puntuación",
+                                "Error de entrada",
+                                JOptionPane.ERROR_MESSAGE);
+                    }
+
                     break;
                 case 1:
-                    Gestor.editarRestaurante();
+                    try {
+                        Gestor.editarRestaurante();
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(null, "Ingrese un número válido para la puntuación",
+                                "Error de entrada",
+                                JOptionPane.ERROR_MESSAGE);
+                    }
+
                     break;
                 case 2:
                     Gestor.mostrarRestaurantes();
@@ -27,7 +41,8 @@ public class Menu {
                     Gestor.borrarRestaurante();
                     break;
                 case 4:
-                    JOptionPane.showMessageDialog(null, "Hasta luego!!!", "Saliendo del programa...", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Hasta luego!!!", "Saliendo del programa...",
+                            JOptionPane.INFORMATION_MESSAGE);
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Opción no válida");
