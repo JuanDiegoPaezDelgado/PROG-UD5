@@ -6,7 +6,7 @@ import java.util.Collections;
 import javax.swing.JOptionPane;
 
 import net.salesianos.restaurante.Restaurante;
-import net.utilidades.Utilidad;
+import net.salesianos.utilidades.Utilidad;
 
 public class Gestor {
         private static ArrayList<Restaurante> listaRestaurantes = new ArrayList<>();

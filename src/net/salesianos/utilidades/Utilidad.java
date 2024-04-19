@@ -1,4 +1,4 @@
-package net.utilidades;
+package net.salesianos.utilidades;
 
 public class Utilidad {
     public static boolean validacionEntradaDatoString(String string) {
