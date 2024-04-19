@@ -120,12 +120,31 @@ public class Gestor {
                                                 String nuevoNombreTodo = JOptionPane.showInputDialog(null,
                                                                 "Ingrese el nuevo nombre",
                                                                 "Editar nombre", JOptionPane.QUESTION_MESSAGE);
+                                                if (!Utilidad.validacionEntradaDatoString(nuevoNombreTodo)) {
+                                                        JOptionPane.showMessageDialog(null,
+                                                                        "Operación cancelada. No se ingresó ningún dato.",
+                                                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                                                        return;
+                                                }
+
                                                 String nuevaLocalizacionTodo = JOptionPane.showInputDialog(null,
                                                                 "Ingrese la nueva localizacion",
                                                                 "Editar localizacion", JOptionPane.QUESTION_MESSAGE);
+                                                if (!Utilidad.validacionEntradaDatoString(nuevaLocalizacionTodo)) {
+                                                        JOptionPane.showMessageDialog(null,
+                                                                        "Operación cancelada. No se ingresó ningún dato.",
+                                                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                                                        return;
+                                                }
                                                 String nuevoHorarioTodo = JOptionPane.showInputDialog(null,
                                                                 "Ingrese el nuevo Horario",
                                                                 "Editar horario", JOptionPane.QUESTION_MESSAGE);
+                                                if (!Utilidad.validacionEntradaDatoString(nuevoHorarioTodo)) {
+                                                        JOptionPane.showMessageDialog(null,
+                                                                        "Operación cancelada. No se ingresó ningún dato.",
+                                                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                                                        return;
+                                                }
                                                 String nuevaPuntuacionTextTodo = JOptionPane.showInputDialog(null,
                                                                 "Ingrese la nueva puntuacion",
                                                                 "Editar puntuacion", JOptionPane.QUESTION_MESSAGE);
@@ -165,6 +184,12 @@ public class Gestor {
 
         public static void borrarRestaurante() {
                 String nombreABorrar = JOptionPane.showInputDialog("Ingrese el nombre del restaurante a eliminar:");
+                if (!Utilidad.validacionEntradaDatoString(nombreABorrar)) {
+                        JOptionPane.showMessageDialog(null,
+                                        "Operación cancelada. No se ingresó ningún dato.",
+                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                        return;
+                }
                 for (Restaurante restaurante : listaRestaurantes) {
                         if (restaurante.getNombre().equalsIgnoreCase(nombreABorrar)) {
                                 listaRestaurantes.remove(restaurante);
