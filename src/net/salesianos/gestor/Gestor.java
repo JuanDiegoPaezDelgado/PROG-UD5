@@ -6,6 +6,7 @@ import java.util.Collections;
 import javax.swing.JOptionPane;
 
 import net.salesianos.restaurante.Restaurante;
+import net.utilidades.Utilidad;
 
 public class Gestor {
         private static ArrayList<Restaurante> listaRestaurantes = new ArrayList<>();
@@ -14,13 +15,29 @@ public class Gestor {
                 String nombre = JOptionPane.showInputDialog(null, "Ingrese el nombre del restaurante",
                                 "Nombre restaurante",
                                 JOptionPane.QUESTION_MESSAGE);
-              
+                if (!Utilidad.validacionEntradaDatoString(nombre)) {
+                        JOptionPane.showMessageDialog(null, "Operación cancelada. No se ingresó ningún dato.",
+                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                        return;
+                }
+
                 String localizacion = JOptionPane.showInputDialog(null, "Ingrese la localizacion del restaurante",
                                 "Localizacion restaurante",
                                 JOptionPane.QUESTION_MESSAGE);
+                if (!Utilidad.validacionEntradaDatoString(localizacion)) {
+                        JOptionPane.showMessageDialog(null, "Operación cancelada. No se ingresó ningún dato.",
+                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                        return;
+                }
                 String horario = JOptionPane.showInputDialog(null, "Ingrese el Horario del restaurante",
                                 "Horario restaurante",
                                 JOptionPane.QUESTION_MESSAGE);
+                if (!Utilidad.validacionEntradaDatoString(horario)) {
+                        JOptionPane.showMessageDialog(null, "Operación cancelada. No se ingresó ningún dato.",
+                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                        return;
+                }
+
                 String puntuacionTexto = JOptionPane.showInputDialog(null, "Ingrese la puntuacion del restaurante",
                                 "Puntuacion restaurante",
                                 JOptionPane.QUESTION_MESSAGE);
