@@ -1,6 +1,7 @@
 package net.salesianos.gestor;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.swing.JOptionPane;
 
@@ -90,5 +91,15 @@ public class Gestor {
             }
             JOptionPane.showMessageDialog(null, "Restaurante no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
         }
+    }
+
+    public static void mostrarRestaurantes() {
+        Collections.sort(listaRestaurantes, (r1, r2) -> Float.compare(r2.getPuntuacion(), r1.getPuntuacion()));
+
+        String restauranteInfo = "------------------------------------------\n";
+        for (Restaurante restaurante : listaRestaurantes) {
+            restauranteInfo += restaurante.toString() + "\n------------------------------------------\n";
+        }
+        JOptionPane.showMessageDialog(null, restauranteInfo, "Lista de Restaurantes", JOptionPane.PLAIN_MESSAGE);
     }
 }
