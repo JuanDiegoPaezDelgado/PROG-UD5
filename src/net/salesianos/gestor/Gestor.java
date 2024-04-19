@@ -75,18 +75,38 @@ public class Gestor {
                                                 String nuevoNombre = JOptionPane.showInputDialog(null,
                                                                 "Ingrese el nuevo nombre",
                                                                 "Editar nombre", JOptionPane.QUESTION_MESSAGE);
+
+                                                if (!Utilidad.validacionEntradaDatoString(nuevoNombre)) {
+                                                        JOptionPane.showMessageDialog(null,
+                                                                        "Operación cancelada. No se ingresó ningún dato.",
+                                                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                                                        return;
+                                                }
                                                 restaurante.setNombre(nuevoNombre);
                                                 break;
+
                                         case 1:
                                                 String nuevaLocalizacion = JOptionPane.showInputDialog(null,
                                                                 "Ingrese la nueva localizacion",
                                                                 "Editar localizacion", JOptionPane.QUESTION_MESSAGE);
+                                                if (!Utilidad.validacionEntradaDatoString(nuevaLocalizacion)) {
+                                                        JOptionPane.showMessageDialog(null,
+                                                                        "Operación cancelada. No se ingresó ningún dato.",
+                                                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                                                        return;
+                                                }
                                                 restaurante.setLocalizacion(nuevaLocalizacion);
                                                 break;
                                         case 2:
                                                 String nuevoHorario = JOptionPane.showInputDialog(null,
                                                                 "Ingrese el nuevo Horario",
                                                                 "Editar horario", JOptionPane.QUESTION_MESSAGE);
+                                                if (!Utilidad.validacionEntradaDatoString(nuevoHorario)) {
+                                                        JOptionPane.showMessageDialog(null,
+                                                                        "Operación cancelada. No se ingresó ningún dato.",
+                                                                        "Cancelado", JOptionPane.ERROR_MESSAGE);
+                                                        return;
+                                                }
                                                 restaurante.setHorario(nuevoHorario);
                                                 break;
                                         case 3:
