@@ -5,7 +5,7 @@ import net.salesianos.gestor.Gestor;
 
 
 public class Menu {
-    public static void showMenu() {
+    public static void mostrarMenu() {
         String[] options = { "Añadir restaurante", "Editar restaurante", "Mostrar restaurantes", "Eliminar restaurante",
                 "Salir del programa" };
         int choice;
