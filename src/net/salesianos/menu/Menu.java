@@ -6,16 +6,16 @@ import net.salesianos.gestor.Gestor;
 
 public class Menu {
     public static void mostrarMenu() {
-        String[] options = { "Añadir restaurante", "Editar restaurante", "Mostrar restaurantes", "Eliminar restaurante",
+        String[] opciones = { "Añadir restaurante", "Editar restaurante", "Mostrar restaurantes", "Eliminar restaurante",
                 "Salir del programa" };
         int opcion;
 
         do {
             String choiceString = (String) JOptionPane.showInputDialog(null, "Seleccione una opción:", "Menú",
-                    JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+                    JOptionPane.PLAIN_MESSAGE, null, opciones, opciones[0]);
             opcion = -1;
-            for (int i = 0; i < options.length; i++) {
-                if (options[i].equals(choiceString)) {
+            for (int i = 0; i < opciones.length; i++) {
+                if (opciones[i].equals(choiceString)) {
                     opcion = i;
                     break;
                 }
