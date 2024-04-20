@@ -1,18 +1,8 @@
-## Getting Started
+En este proyecto realizaremos un sistema de gestion para nuestro cliente RipAdbaisor mediante
+la java Swing , se utilizara GitHub para el control de versiones
+-esta aplicacion permitira nuestro cliente gestionar la informacion de restaurantes, como crear
+mostrar editar y eliminar
+-Usaremos java Swing para la interfaz grafica
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+[Documentacion](./docs/documentacion.md)\
+[Guia usuario](./docs/manualUsuario.md)
