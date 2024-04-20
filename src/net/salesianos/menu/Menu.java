@@ -8,19 +8,19 @@ public class Menu {
     public static void mostrarMenu() {
         String[] options = { "Añadir restaurante", "Editar restaurante", "Mostrar restaurantes", "Eliminar restaurante",
                 "Salir del programa" };
-        int choice;
+        int opcion;
 
         do {
             String choiceString = (String) JOptionPane.showInputDialog(null, "Seleccione una opción:", "Menú",
                     JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
-            choice = -1;
+            opcion = -1;
             for (int i = 0; i < options.length; i++) {
                 if (options[i].equals(choiceString)) {
-                    choice = i;
+                    opcion = i;
                     break;
                 }
             }
-            switch (choice) {
+            switch (opcion) {
                 case 0:
                     try {
                         Gestor.agregarRestaurante();
@@ -55,6 +55,6 @@ public class Menu {
                     JOptionPane.showMessageDialog(null, "Opción no válida");
                     break;
             }
-        } while (choice != 4);
+        } while (opcion != 4);
     }
 }
