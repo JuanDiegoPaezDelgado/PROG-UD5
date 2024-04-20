@@ -46,4 +46,8 @@ el metodo de borrar  nos preguntara por el nombre del restaurante que queramos b
 ------------------------------------------------------------------------------o
 
 la paquetacion sera la siguiente:
+
  ![paquete](./imgs/codigo/paquetacion.png)
+
+
+[Volver](/README.md)
